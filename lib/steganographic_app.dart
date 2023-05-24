@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:steganographic/l10n/resources.dart';
 import 'package:steganographic/theme/context_extensions.dart';
-import 'package:steganographic/theme/theme.dart';
+import 'package:steganographic/theme/app_theme.dart';
 
 class SteganographicApp extends StatelessWidget {
   const SteganographicApp({super.key});
