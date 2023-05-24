@@ -13,5 +13,5 @@ void main() async {
 
   await R.ensureInitialized();
 
-  runApp(const SteganographicApp());
+  runApp(SteganographicApp());
 }

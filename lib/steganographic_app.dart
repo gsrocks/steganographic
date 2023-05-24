@@ -1,14 +1,18 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:steganographic/l10n/resources.dart';
+import 'package:steganographic/routing/app_router.dart';
 import 'package:steganographic/theme/context_extensions.dart';
 import 'package:steganographic/theme/app_theme.dart';
 
 class SteganographicApp extends StatelessWidget {
-  const SteganographicApp({super.key});
+  SteganographicApp({super.key});
+
+  final _router = AppRouter();
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: R.strings.appName,
       theme: ThemeData(
@@ -22,15 +26,14 @@ class SteganographicApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: MyHomePage(title: R.strings.appName),
+      routerConfig: _router.config(),
     );
   }
 }
 
+@RoutePage()
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -50,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: context.colors.inversePrimary,
-        title: Text(widget.title),
+        title: Text(R.strings.appName),
       ),
       body: Center(
         child: Column(
