@@ -1,3 +1,3 @@
 # steganographic
 
-App that demos steganographic algorithms
+An app that demos steganography algorithms
