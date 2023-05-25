@@ -15,18 +15,8 @@ class SteganographicApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: R.strings.appName,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: AppTheme.primaryColor),
-        useMaterial3: true,
-        listTileTheme: AppTheme.listTileTheme,
-      ),
-      darkTheme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: AppTheme.primaryColor,
-          brightness: Brightness.dark,
-        ),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
       routerConfig: _router.config(),
     );
   }

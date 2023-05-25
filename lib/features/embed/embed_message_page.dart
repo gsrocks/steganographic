@@ -10,10 +10,8 @@ class EmbedMessagePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF0EEE6), // TODO: add to theme
       appBar: AppBar(
         title: Text(R.strings.embedMessage),
-        backgroundColor: const Color(0xFFF0EEE6), // TODO: add to theme
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 32),
