@@ -18,6 +18,7 @@ class SteganographicApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: AppTheme.primaryColor),
         useMaterial3: true,
+        listTileTheme: AppTheme.listTileTheme,
       ),
       darkTheme: ThemeData(
         colorScheme: ColorScheme.fromSeed(

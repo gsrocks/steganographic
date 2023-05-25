@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 import 'dart:ui';
 
@@ -22,10 +23,14 @@ class R {
 
   static Locale _getCurrentLocale() {
     Locale currentLocale = AppLocalizations.supportedLocales.first;
-    final parts = Platform.localeName.split('_');
-    final locale = Locale(parts.first, parts.last);
-    if (AppLocalizations.delegate.isSupported(locale)) {
-      currentLocale = locale;
+    try {
+      final parts = Platform.localeName.split('_');
+      final locale = Locale(parts.first, parts.last);
+      if (AppLocalizations.delegate.isSupported(locale)) {
+        currentLocale = locale;
+      }
+    } catch (e) {
+      log(e.toString());
     }
     return currentLocale;
   }
